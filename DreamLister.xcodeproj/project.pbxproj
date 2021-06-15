@@ -26,6 +26,7 @@
 		CB70CF6126725DD30062A33A /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB70CF6026725DD30062A33A /* ItemCell.swift */; };
 		CB70CF642678FDFB0062A33A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB70CF632678FDFB0062A33A /* Constants.swift */; };
 		CB70CF6626790A630062A33A /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB70CF6526790A630062A33A /* CustomTextField.swift */; };
+		CB70CF6826790F3F0062A33A /* ItemDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB70CF6726790F3F0062A33A /* ItemDetailsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		CB70CF6026725DD30062A33A /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		CB70CF632678FDFB0062A33A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CB70CF6526790A630062A33A /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		CB70CF6726790F3F0062A33A /* ItemDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				CB70CF38267251D20062A33A /* MainVC.swift */,
+				CB70CF6726790F3F0062A33A /* ItemDetailsVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 				CB70CF6626790A630062A33A /* CustomTextField.swift in Sources */,
 				CB70CF6126725DD30062A33A /* ItemCell.swift in Sources */,
 				CB70CF642678FDFB0062A33A /* Constants.swift in Sources */,
+				CB70CF6826790F3F0062A33A /* ItemDetailsVC.swift in Sources */,
 				CB70CF39267251D20062A33A /* MainVC.swift in Sources */,
 				CB70CF5A2672577E0062A33A /* Item+CoreDataClass.swift in Sources */,
 				CB70CF5B2672577E0062A33A /* Item+CoreDataProperties.swift in Sources */,

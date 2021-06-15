@@ -144,7 +144,7 @@
         <!--Add / Edit-->
         <scene sceneID="tf8-uu-toS">
             <objects>
-                <viewController id="HvH-gB-puV" sceneMemberID="viewController">
+                <viewController id="HvH-gB-puV" customClass="ItemDetailsVC" customModule="DreamLister" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qGd-Z0-vmF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -186,6 +186,9 @@
                                     <constraint firstAttribute="height" constant="100" id="Kc6-xv-erV"/>
                                     <constraint firstAttribute="width" constant="100" id="fOr-DX-JtU"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="addImage:" destination="HvH-gB-puV" eventType="touchUpInside" id="3Ei-Cl-eRY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Of6-dx-vgD">
                                 <rect key="frame" x="0.0" y="824" width="414" height="38"/>
@@ -193,6 +196,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Save Item"/>
+                                <connections>
+                                    <action selector="savePressed:" destination="HvH-gB-puV" eventType="touchUpInside" id="XEm-ac-XnT"/>
+                                </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="En8-Te-sHV">
                                 <rect key="frame" x="0.0" y="608" width="414" height="216"/>
@@ -236,8 +242,18 @@
                     <navigationItem key="navigationItem" title="Add / Edit" id="mng-cC-IhQ">
                         <barButtonItem key="rightBarButtonItem" systemItem="trash" id="1OS-1I-l1D">
                             <color key="tintColor" systemColor="systemRedColor"/>
+                            <connections>
+                                <action selector="deletePressed:" destination="HvH-gB-puV" id="bYc-bE-Hty"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="detailsField" destination="dJk-vy-db0" id="09q-Ep-42r"/>
+                        <outlet property="priceField" destination="kxr-q0-70c" id="4ZL-tI-t4o"/>
+                        <outlet property="storePicker" destination="En8-Te-sHV" id="Sj2-dX-3vU"/>
+                        <outlet property="thumb" destination="tnZ-mi-GmH" id="gxv-hV-KjV"/>
+                        <outlet property="titleField" destination="6Pd-bK-C3a" id="GvW-LW-cLr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QZm-Te-c7w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
