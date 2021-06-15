@@ -7,9 +7,7 @@
 
 import UIKit
 
-enum Constants {
-    static var materialKey: Bool = false
-}
+
 
 extension UIView {
     @IBInspectable var materialDesign: Bool {

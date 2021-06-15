@@ -24,6 +24,7 @@
 		CB70CF5D2672577E0062A33A /* Store+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB70CF552672577E0062A33A /* Store+CoreDataProperties.swift */; };
 		CB70CF5F26725BB60062A33A /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB70CF5E26725BB60062A33A /* MaterialView.swift */; };
 		CB70CF6126725DD30062A33A /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB70CF6026725DD30062A33A /* ItemCell.swift */; };
+		CB70CF642678FDFB0062A33A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB70CF632678FDFB0062A33A /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		CB70CF552672577E0062A33A /* Store+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Store+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CB70CF5E26725BB60062A33A /* MaterialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		CB70CF6026725DD30062A33A /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		CB70CF632678FDFB0062A33A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 		CB70CF33267251D20062A33A /* DreamLister */ = {
 			isa = PBXGroup;
 			children = (
+				CB70CF622678FDEC0062A33A /* Utilities */,
 				CB70CF4D267257450062A33A /* Model */,
 				CB70CF4C267257370062A33A /* View */,
 				CB70CF4B2672572C0062A33A /* Controller */,
@@ -122,6 +125,14 @@
 				CB70CF4F2672577E0062A33A /* Image+CoreDataProperties.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CB70CF622678FDEC0062A33A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CB70CF632678FDFB0062A33A /* Constants.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +210,7 @@
 				CB70CF4A2672529E0062A33A /* DreamLister.xcdatamodeld in Sources */,
 				CB70CF5F26725BB60062A33A /* MaterialView.swift in Sources */,
 				CB70CF6126725DD30062A33A /* ItemCell.swift in Sources */,
+				CB70CF642678FDFB0062A33A /* Constants.swift in Sources */,
 				CB70CF39267251D20062A33A /* MainVC.swift in Sources */,
 				CB70CF5A2672577E0062A33A /* Item+CoreDataClass.swift in Sources */,
 				CB70CF5B2672577E0062A33A /* Item+CoreDataProperties.swift in Sources */,
