@@ -16,7 +16,9 @@ class ItemDetailsVC: UIViewController {
     @IBOutlet weak var detailsField: CustomTextField!
     
     @IBOutlet weak var storePicker: UIPickerView!
+    
     var stores = [Store]()
+    var itemToEdit: Item?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +30,10 @@ class ItemDetailsVC: UIViewController {
         storePicker.dataSource = self
 //        generateStores()
         getStores()
+        
+        if itemToEdit != nil {
+            loadExsistingData()
+        }
     }
 
 }
@@ -38,7 +44,12 @@ extension ItemDetailsVC {
     
     @IBAction func savePressed(_ sender: UIButton) {
         var item: Item!
-        item = Item(context: Constants.context)
+        if itemToEdit != nil {
+            item = itemToEdit
+        } else {
+            item = Item(context: Constants.context)
+        }
+        
         guard let title = titleField.text, !title.isEmpty, let price = priceField.text, !price.isEmpty else { return }
         
         item.name = title
@@ -54,7 +65,16 @@ extension ItemDetailsVC {
     }
     
     @IBAction func deletePressed(_ sender: UIButton) {
-        
+        if itemToEdit != nil {
+            Constants.context.delete(itemToEdit!)
+            Constants.ad.saveContext()
+            navigationController?.popViewController(animated: true)
+        } else {
+            titleField.text = ""
+            priceField.text = ""
+            detailsField.text = ""
+            storePicker.selectRow(0, inComponent: 0, animated: true)
+        }
     }
     
     @IBAction func addImage(_ sender: UIButton) {
@@ -115,6 +135,27 @@ extension ItemDetailsVC {
             self.storePicker.reloadAllComponents()
         } catch {
             print(error)
+        }
+    }
+    
+    func loadExsistingData() {
+        if let item = itemToEdit {
+            titleField.text = item.name
+            priceField.text = "\(item.price)"
+            detailsField.text = item.details
+            thumb.image = item.image?.image as? UIImage
+            
+            if let store = item.store {
+                var index = 0
+                repeat {
+                    let storeName = stores[index]
+                    if storeName.name == store.name {
+                        storePicker.selectRow(index, inComponent: 0, animated: false)
+                        break
+                    }
+                    index += 1
+                } while (index < stores.count)
+            }
         }
     }
 }

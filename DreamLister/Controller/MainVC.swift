@@ -27,6 +27,16 @@ class MainVC: UIViewController {
 //        generateDummyData()
         attemptFetch()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Constants.Segues.EditItem {
+            if let destination = segue.destination as? ItemDetailsVC {
+                if let item = sender as? Item {
+                    destination.itemToEdit = item
+                }
+            }
+        }
+    }
 }
 
 //MARK: - Actions
@@ -38,6 +48,7 @@ extension MainVC {
     }
 }
 
+//MARK: - TableView Setup
 
 extension MainVC: UITableViewDelegate, UITableViewDataSource {
     
@@ -60,6 +71,13 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellReuseId, for: indexPath) as? ItemCell else {return UITableViewCell()}
         configureCell(cell, indexPath: indexPath)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let objects = controller.fetchedObjects, objects.count > 0 {
+            let item = objects[indexPath.row]
+            performSegue(withIdentifier: Constants.Segues.EditItem, sender: item)
+        }
     }
     
     func configureCell(_ cell: ItemCell, indexPath: IndexPath) {

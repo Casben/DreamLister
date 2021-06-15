@@ -13,7 +13,7 @@ enum Constants {
     static let context = ad.persistentContainer.viewContext
     static let cellReuseId = "ItemCell"
     
-    enum segues {
+    enum Segues {
         static let AddNewItem = "SegueAddNewItem"
         static let EditItem = "SegueEditItem"
     }
