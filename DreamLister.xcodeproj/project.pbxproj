@@ -25,6 +25,7 @@
 		CB70CF5F26725BB60062A33A /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB70CF5E26725BB60062A33A /* MaterialView.swift */; };
 		CB70CF6126725DD30062A33A /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB70CF6026725DD30062A33A /* ItemCell.swift */; };
 		CB70CF642678FDFB0062A33A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB70CF632678FDFB0062A33A /* Constants.swift */; };
+		CB70CF6626790A630062A33A /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB70CF6526790A630062A33A /* CustomTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		CB70CF5E26725BB60062A33A /* MaterialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		CB70CF6026725DD30062A33A /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		CB70CF632678FDFB0062A33A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CB70CF6526790A630062A33A /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 		CB70CF4C267257370062A33A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CB70CF6526790A630062A33A /* CustomTextField.swift */,
 				CB70CF5E26725BB60062A33A /* MaterialView.swift */,
 				CB70CF6026725DD30062A33A /* ItemCell.swift */,
 			);
@@ -209,6 +212,7 @@
 				CB70CF5D2672577E0062A33A /* Store+CoreDataProperties.swift in Sources */,
 				CB70CF4A2672529E0062A33A /* DreamLister.xcdatamodeld in Sources */,
 				CB70CF5F26725BB60062A33A /* MaterialView.swift in Sources */,
+				CB70CF6626790A630062A33A /* CustomTextField.swift in Sources */,
 				CB70CF6126725DD30062A33A /* ItemCell.swift in Sources */,
 				CB70CF642678FDFB0062A33A /* Constants.swift in Sources */,
 				CB70CF39267251D20062A33A /* MainVC.swift in Sources */,
